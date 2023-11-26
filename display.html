@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>MAP</title>
+
+        <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columns */
+            grid-gap: 10px; /* Adjust the gap between cells */
+            max-width: 600px; /* Set a maximum width for better readability */
+            margin: 20px auto;
+        }
+
+        .cell {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const gridContainer = document.body;
+    
+                for (let i = 1; i <= 30; i++) {
+                    const cell = document.createElement("div");
+                    cell.className = "cell";
+                    cell.textContent = "slot " + i;
+                    gridContainer.appendChild(cell);
+                }
+            });
+        </script>
+    </body>
+</html>
