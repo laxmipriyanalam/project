@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Parking</title>
+
+        <style>
+            body{
+                background-image:url("file:///C:/Users/sanga/Desktop/internship/images/parking.jpg");
+                background-size: cover;
+                background-position: center;
+                margin:0;
+                padding:0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1{
+                margin-top: 0px;font-size:64px;text-align: center;
+            }
+            button{
+                background-color: #4caf50;
+                color: white;
+                padding: 20px 30px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+                text-align: center;
+                margin: auto;
+                font-size: medium;
+            }
+            button:hover{
+                background-color: #3b8a3f;
+                transition-duration: 350ms;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background-image"></div>
+        <h1>Parking</h1>
+        <button onclick="redirectToPage('park.html')">PARK</button>
+        <br><br>
+        <button onclick="redirectToPage('unpark.html')">UNPARK</button>
+        <script>
+            function redirectToPage(page){
+                window.location.href=page;
+            }
+        </script>
+
+    </body>
+</html>
