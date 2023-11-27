@@ -95,6 +95,34 @@
 
             </form>
         </div>
+        <select id="slot"
+        onchange="saveValueAndRedirect()">
+            </select>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // Assume the number of options you want is dynamic, for example, based on user input
+            const numberOfOptions = 30;
+
+            // Select the dropdown element
+            const dropdown = document.getElementById('dynamicDropdown');
+
+            // Add options dynamically
+            for (let i = 1; i <= numberOfOptions; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.text = `Option ${i}`;
+                dropdown.add(option);
+            }
+        });
+        function saveValueAndRedirect(){
+            var selectedValue=document.getElementById("slot").value;
+            localStorage.setItem("selectedSlot",selectedValue);
+            window.location.href="unpark.html";
+        }
+        function redirectToPage(page){
+                window.location.href=page;
+        }
+        </script>
         
     </body>
 
