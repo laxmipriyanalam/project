@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Parking</title>
+        <head>
+            <style>
+                table{
+                    width: 100%;
+                    border-collapse:collapse;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+                }
+                th,td{
+                    border:1px solid #ddd;
+                    padding:8px;
+                    text-align: center;
+                }
+                th{
+                    background-color: #f2f2f2;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="entries">
+                <br><br>
+                <h1>Entries</h1>
+                <table id="user-data">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Vehicle-name</th>
+                            <th>vehicle-number</th>
+                            <th>Slot number</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                const form = document.querySelector('form');
+                const table = document.querySelector('table');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                // Fetch form values
+                const name = document.getElementById('name').value;
+                const vehiclename = document.getElementById('vehiclename').value;
+                const vehiclenumber = document.getElementById('vehiclenumber').value;
+                const dynamicDropdown = document.getElementById('dynamicDropdown').value;
+            
+
+                // Add a new row to the table
+                const newRow = table.insertRow(-1);
+                const cells = [name, vehiclename, vehiclenumber,dynamicDropdown];
+
+                for (const cellValue of cells) {
+                    const cell = newRow.insertCell();
+                    cell.textContent = cellValue;
+                }
+
+                // Clear the form
+                form.reset();
+            });
+        });
+                
+
+            </script>
+        </body>
+    </html>
