@@ -95,6 +95,31 @@
 
             </form>
         </div>
+        <select id="unslot"></select>
+        <script>
+            window.onload=function(){
+                var selectedSlot=localStorage.getItem("selectedSlot");
+                var unslot=document.getElementById("unslot");
+                if(selectedSlot){
+                    var option=document.createElement("option");
+                    option.value=selectedSlot;
+                    option.text=selectedSlot;
+                    unslot.appendChild(option);
+                }
+                addOption(unslot,3);
+                addOption(unslot,5);
+                addOption(unslot,6);
+            }
+            function addOption(dropdown,value){
+                var option=document.createElement("option");
+                option.value=value;
+                option.text=value;
+                dropdown.appendChild(option);
+            }
+            function redirectToPage(page){
+                window.location.href=page;
+            }
+        </script>
         
     </body>
 
