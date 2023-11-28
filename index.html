@@ -27,7 +27,7 @@
             h1{
                 margin-top: 0px;font-size:50px;text-align: center;
             }
-            .button{
+            button{
                 background-color: #4caf50;
                 color: white;
                 padding: 20px 30px;
@@ -71,6 +71,10 @@
             max-width: 500px; /* Adjust the max-width as needed */
             margin-right: 10px; /* Adjust the margin as needed */
         }
+        .btns{
+            display:flex;
+            flex-direction:column;
+        }
             
         </style>
     </head>
@@ -90,9 +94,8 @@
             </div>
             <img class="image-container" src="./collegeparking.png" alt="image">
         </div>
-        <div class="button">
+        <div class="btns">
         <button onclick="redirectToPage('park.html')">PARK</button>
-        <br><br>
         <button onclick="redirectToPage('unpark.html')">UNPARK</button>
         </div>
 
