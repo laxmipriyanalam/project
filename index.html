@@ -7,17 +7,25 @@
 
         <style>
             body{
-                background-image:url("./parking.jpg");
-                background-size: cover;
-                background-position:  bottom 50px right 100px;;
                 margin:0;
                 padding:0;
                 font-family: Arial, Helvetica, sans-serif;
             }
+            
+            .main-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .text {
+            max-width: 50%; /* Adjust the max-width as needed */
+        }
+
+        .image-container {
+            max-width: 50%; /* Adjust the max-width as needed */
+        }
             h1{
-                margin-top: 0px;
-                font-size:64px;
-                text-align: center;
+                margin-top: 0px;font-size:64px;text-align: center;
             }
             button{
                 background-color: #4caf50;
@@ -32,7 +40,7 @@
                 font-size: medium;
             }
             button:hover{
-                background-color: #3b8a3f;
+                background-color: #4f7da8;
                 transition-duration: 350ms;
             }
             nav {
@@ -54,18 +62,38 @@
             nav a:hover {
                 background-color: #555;
             }
+            .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .image {
+            max-width: 500px; /* Adjust the max-width as needed */
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+            
         </style>
     </head>
     <body>
-        <h1>Parking</h1>
+        <div class="container">
+            <img class="image" src="./logo.png" alt="logo">
+            <h1>PARKING MANAGEMENT SYSTEM</h1>
+        </div> 
         <nav>
             <a href="#" onclick="redirectToPage('index.html')">HOME</a>
-            <a href="#" onclick="redirectToPage('display.html')">DISPLAY</a>
+            <a href="#" onclick="redirectToPage('grid.html')">DISPLAY</a>
             <a href="#" onclick="redirectToPage('history.html')">HISTORY</a>
         </nav><hr>
+        <div class="main-content">
+            <div class="text">
+                <p>Welcome to our state-of-the-art Parking Management System! We understand the challenges of our college parking and have designed a solution to streamline your parking experience. Our system provide real-time parking availability updates, enabling you to find parking spaces effortlessly. Say goodbye to circling the block endlessly — ensure a seamless and stress-free parking experience. Explore the future of parking convenience with us!</p>
+            </div>
+            <img class="image-container" src="./collegeparking.png" alt="image">
+        </div>
         <button onclick="redirectToPage('park.html')">PARK</button>
         <br><br>
         <button onclick="redirectToPage('unpark.html')">UNPARK</button>
+
         <script>
             function redirectToPage(page){
                 window.location.href=page;
